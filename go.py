@@ -14,6 +14,16 @@ import requests
 import websocket
 from pyppeteer import launch
 from PyPDF2 import PdfMerger
+from pyppeteer import launch
+
+browser = await launch(
+    headless=False,  # 改成 False，讓瀏覽器可見
+    args=[
+        "--no-sandbox",
+        "--disable-blink-features=AutomationControlled"
+    ]
+)
+
 
 AUTH_TOKEN = "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyMzc4Mjc4MSwidG9rZW4iOiJjYzFjNmI1NS04Y2Q4LTQwMmMtYjQ5Yi1hMzZlMGUwODI0NmMiLCJwZXJzaXN0ZW50Ijp0cnVlLCJpYXQiOjE3NDEzNDA2NTR9.ZEPDCkXzfbEBYua8hC4fcfRbN4x2uxG18xSod2SQhS0I9jrpJpjj3iuD_vD6el4lETyt5b6_AVKmjuKPuDOVra83cDNtor4oAkyATEHrJ_jrAEvL_K5lauAMw_3ZjMQZmcw1h6WLGmJHrNQocc0v1vxKDzPlp0I7fOIcmri-IAkcwp3oYPf-z80fn2jN3vkxIEydVnV4EYGD3V4B95-K16THOyv64HuNZlNY95xelFB4tvUZ-gbkEjsbERf9dwqSzrRcVJVsXce5fnBD5An3XSG6uNEgx-IXAVPbqlPFUrDG7Savb_MbGWgUBnx-9wfzkuKncTyc5AawLjZmIsLhRvUIjdeiJ68KFBCZcV9f5fpWTfiLR7alPUyZSRkZlgAw97ek8WnzzrY8YAJMWgR2-zCRDYqctRVZs4KXxcJvfEAf-wc_0xbUwVvi0wasPrflqFNDABYEXBv-5XkpSesKHoufFcjyw80zO2q427SYnfmL2gKz7p0bslC4H_X_EV_do163NsWvAHZHtjRcPNSWsSkAopxpsbHxl99812N5R32GjfEHlK5tkFIadlnlR0u3oJ9DHSx2l2icuW3l70Uvh4LhZGP4_S7b5VnFA-I3oUx6jwDIHXT3ku0UPUFaCNa-2_IwWb_2xZWFSj02nsz3iouObsouFhHZ5u3b67irMng"
 

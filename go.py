@@ -32,7 +32,7 @@ def init_book_delivery():
 			continue
 		break
 
-	time.sleep(1)
+	time.sleep(4)
 
 	ws.send(json.dumps({"action":"initialise","data":{"authToken": AUTH_TOKEN, "reCaptchaToken": RECAPTCHA, "bookId": str(BOOK_ID)}}))
 
